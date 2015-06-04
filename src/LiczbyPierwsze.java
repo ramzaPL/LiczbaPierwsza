@@ -41,8 +41,8 @@ public class LiczbyPierwsze {
 			if (licznik == 1)
 			{
 				System.out.println(tablicaLiczb[i]);
-				
 			}
+			
 			licznik = 0;
 		}
 		
