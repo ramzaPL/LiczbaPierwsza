@@ -18,8 +18,7 @@ public class LiczbyPierwsze {
 	public static int getIloscLiczb()
 	{
 		return iloscLiczb;
-	}
-	
+	}	
 	
 	public static void main(String[] args) {
 		
@@ -29,17 +28,17 @@ public class LiczbyPierwsze {
 		scan = new Scanner(System.in);
 		liczbyP.setIloscLiczb(scan.nextInt());
 		
-		//iloscLiczb = scan.nextInt();
-		
 		while (getIloscLiczb() < 1)
 		{
 			liczbyP.setIloscLiczb(scan.nextInt());
 		}
 		
 		System.out.println("Podaj kolejne liczby:");
+		
+		//teraz to		
 		tablicaLiczb = new int[iloscLiczb];
 		
-		for(int i = 0; i < iloscLiczb; i++)
+		for(int i = 0; i < getIloscLiczb(); i++)
 		{
 			tablicaLiczb[i] = scan.nextInt();
 		}
