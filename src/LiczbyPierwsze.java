@@ -33,9 +33,7 @@ public class LiczbyPierwsze {
 			liczbyP.setIloscLiczb(scan.nextInt());
 		}
 		
-		System.out.println("Podaj kolejne liczby:");
-		
-		//teraz to		
+		System.out.println("Podaj kolejne liczby:");			
 		tablicaLiczb = new int[iloscLiczb];
 		
 		for(int i = 0; i < getIloscLiczb(); i++)
@@ -44,23 +42,7 @@ public class LiczbyPierwsze {
 		}
 		
 		System.out.println("Liczby pierwsze: to");
-		
-		for(int i = 0; iloscLiczb > i; i++)
-		{
-			for (int j = 1; j < tablicaLiczb[i]; j++)
-			{
-				if (tablicaLiczb[i] % j == 0)
-				{		
-					licznik ++;	
-				}
-			}
-			
-			if (licznik == 1)
-			{
-				System.out.println(tablicaLiczb[i]);
-			}
-			
-			licznik = 0;
-		}		
+		LiczeniePierwszej liczeniePierwszej = new LiczeniePierwszej();
+		liczeniePierwszej.czyPierwsza(tablicaLiczb);		
 	}
 }
