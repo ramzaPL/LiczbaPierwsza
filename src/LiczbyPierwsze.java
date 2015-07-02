@@ -3,19 +3,37 @@ import java.util.Scanner;
 
 public class LiczbyPierwsze {
 	
-	static int iloscLiczb;
-	static Scanner scan;
-	static int[] tablicaLiczb;
-	static int licznik = 0;
+	private static int iloscLiczb;
+	private static Scanner scan;
+	private static int[] tablicaLiczb;
+	private static int licznik = 0;
+	
+	//Mutator - utawienie wartoœci pola
+	public void setIloscLiczb(int iloscLiczbDoSprawdzenia)
+	{
+		iloscLiczb = iloscLiczbDoSprawdzenia;
+	}
+	
+	//Akcessor - wyrzucenie wartoœci pola
+	public static int getIloscLiczb()
+	{
+		return iloscLiczb;
+	}
+	
 	
 	public static void main(String[] args) {
+		
+		LiczbyPierwsze liczbyP = new LiczbyPierwsze();
+		
 		System.out.println("Podaj ilosc liczb do sprwdzenia:");
 		scan = new Scanner(System.in);
-		iloscLiczb = scan.nextInt();
+		liczbyP.setIloscLiczb(scan.nextInt());
 		
-		while (iloscLiczb < 1)
+		//iloscLiczb = scan.nextInt();
+		
+		while (getIloscLiczb() < 1)
 		{
-			iloscLiczb = scan.nextInt();
+			liczbyP.setIloscLiczb(scan.nextInt());
 		}
 		
 		System.out.println("Podaj kolejne liczby:");
@@ -44,9 +62,6 @@ public class LiczbyPierwsze {
 			}
 			
 			licznik = 0;
-		}
-		
-		
+		}		
 	}
-
 }
